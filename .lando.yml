@@ -1,0 +1,14 @@
+name: laravel11-api
+recipe: laravel
+config:
+  webroot: public
+  php: 8.2
+  via: nginx
+services:
+  pma:
+    type: phpmyadmin
+    hosts:
+      - database
+proxy:
+  pma:
+    - pma.laravel11-api.lndo.site
